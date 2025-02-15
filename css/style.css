@@ -4,7 +4,10 @@
     padding: 0;
     list-style-type: none;
 }
-
+@font-face {
+    font-family: "helvetica-black";
+    src: url("/fonts/helvetica-black.ttf");
+}
 @font-face {
     font-family: "helvetica-black";
     src: url("https://esmith897.s3.us-east-1.amazonaws.com/FinalProject/Progress+Update+1/fonts/helvetica-black.ttf");
