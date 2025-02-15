@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black";
     src: url("https://esmith897.s3.us-east-1.amazonaws.com/FinalProject/Progress+Update+1/fonts/helvetica-black.ttf");
 }
 @font-face {
@@ -255,7 +255,7 @@ main {
 }
 
 h1 {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black", sans-serif;
     line-height: 1.2em;
     animation: textFadeIn;
     animation-duration: 3s;
@@ -277,14 +277,14 @@ h2 {
 }
 
 h3, h4 {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black";
     font-size: 2em;
     position: relative;
     color: #000000;
 }
 
 button {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black";
     color: #FFFFFF;
     padding: .2em;
     background-color: #f38129;
@@ -293,7 +293,7 @@ button {
 }
 
 #hero-button {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black";
     color: #FFFFFF;
     position: relative;
     padding: .2em;
@@ -449,7 +449,7 @@ i {
 }
 
 li {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black";
     font-size: 1em;
     padding: .2em;
     line-height: 1em;
@@ -457,7 +457,7 @@ li {
 }
 
 label {
-    font-family: "Helvetica Black";
+    font-family: "helvetica-black";
     font-size: 1em;
     position: relative;
     padding-bottom: .5em;
