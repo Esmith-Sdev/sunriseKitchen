@@ -3,15 +3,17 @@
 <head>
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sunrise Kitchen</title>
+
 </head>
 <body>
 <div class="wrapper">
     <header>
         <div class="flexbox">
-            <img class="logo" src="img/sunrise-logo.png" alt="Sunrise Kitchen">
+            <img id="mobile-nav-logo" src="img/sunrise-logo.png" alt="Sunrise Kitchen">
             <!------------------------------------Mobile Nav------------------------------->
             <div class="off-screen-menu">
                 <ul>
@@ -32,18 +34,24 @@
             </nav>
             <!------------------------------------Desktop Nav------------------------------->
             <div class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Menu.html">Menu</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-                    <li><a href="ContactUs.html">Contact Us</a></li>
-                    <li><a class="nav-order-button" href="OrderOnline.html">Order Online</a></li>
-                </ul>
+                <div class = "desktop-nav-items">
+                    <div class="middle">
+                        <img id="desktop-nav-logo" src="img/sunrise-logo.png" alt="Sunrise Kitchen">
+                        <ul>
+                            <li><a href="Menu.html">Menu</a></li>
+                            <li><a href="Gallery.html">Gallery</a></li>
+                            <li><a href="AboutUs.html">About Us</a></li>
+                            <li><a href="ContactUs.html">Contact Us</a></li>
+                        </ul>
+                        <div class = "nav-order-button-container">
+                            <a href="OrderOnline.html">Order Online</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <div class="homeHero">
+    <div id="homeHero">
         <h1>
             <span class="small-text">SAVOR THE</span>
             <span class="big-text"><br>CARIBBEAN</span>
@@ -75,16 +83,16 @@
                 <div id="slideshow">
                     <div class="slide-wrapper">
                         <div class="slide">
-                            <img class="gallery-images" src="img/SunriseKitchen_food.jpg" alt="Food Plate One">
+                            <img class="slideshow-images" src="img/SunriseKitchen_food.jpg" alt="Food Plate One">
                         </div>
                         <div class="slide">
-                            <img class="gallery-images" src="img/SunriseKitchen_food2.jpg" alt="Food Plate Two">
+                            <img class="slideshow-images" src="img/SunriseKitchen_food2.jpg" alt="Food Plate Two">
                         </div>
                         <div class="slide">
-                            <img class="gallery-images" src="img/SunriseKitchen_menu.jpg" alt="Menu">
+                            <img class="slideshow-images" src="img/SunriseKitchen_menu.jpg" alt="Menu">
                         </div>
                         <div class="slide">
-                            <img class="gallery-images" src="img/SunriseKitchen_outside.jpg" alt="Outside Restaurant">
+                            <img class="slideshow-images" src="img/SunriseKitchen_outside.jpg" alt="Outside Restaurant">
                         </div>
                     </div>
                 </div>
@@ -95,11 +103,26 @@
         <div class="review-container">
             <img class="review-image" src="img/employeeImage.png" alt="Chef Photo">
             <div class="review-icon-container">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                     class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                     class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                     class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                     class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                     class="bi bi-star-half" viewBox="0 0 16 16">
+                    <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
+                </svg>
             </div>
             <div>
                 <button><a href="review.html">REVIEW US</a></button>
@@ -138,9 +161,7 @@
     </footer>
 </div>
 <script src="app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
