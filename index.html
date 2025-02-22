@@ -13,7 +13,7 @@
 <div class="wrapper">
     <header>
         <div class="flexbox">
-            <img id="mobile-nav-logo" src="img/sunrise-logo.png" alt="Sunrise Kitchen">
+            <a class="logo-anchor" href="index.html"><img class="logo" src="img/sunrise-logo.png" alt="Sunrise Kitchen"></a>
             <!------------------------------------Mobile Nav------------------------------->
             <div class="off-screen-menu">
                 <ul>
@@ -34,16 +34,15 @@
             </nav>
             <!------------------------------------Desktop Nav------------------------------->
             <div class="desktop-nav">
-                <div class = "desktop-nav-items">
+                <div class="desktop-nav-items">
                     <div class="middle">
-                        <img id="desktop-nav-logo" src="img/sunrise-logo.png" alt="Sunrise Kitchen">
                         <ul>
                             <li><a href="Menu.html">Menu</a></li>
                             <li><a href="Gallery.html">Gallery</a></li>
                             <li><a href="AboutUs.html">About Us</a></li>
                             <li><a href="ContactUs.html">Contact Us</a></li>
                         </ul>
-                        <div class = "nav-order-button-container">
+                        <div class="nav-order-button-container">
                             <a href="OrderOnline.html">Order Online</a>
                         </div>
                     </div>
@@ -62,43 +61,43 @@
     </div>
     <main>
         <div class="specialties-container">
-            <h2>SPECIALTIES</h2>
-            <hr>
             <div class="specialties-items">
-                <ul class="items-left">
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                </ul>
-                <ul class="items-right">
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                    <li>Specialty Item<br/>$20</li>
-                </ul>
-                <!--------------------------------Slideshow Gallery------------------------------------>
-                <div id="slideshow">
-                    <div class="slide-wrapper">
-                        <div class="slide">
-                            <img class="slideshow-images" src="img/SunriseKitchen_food.jpg" alt="Food Plate One">
-                        </div>
-                        <div class="slide">
-                            <img class="slideshow-images" src="img/SunriseKitchen_food2.jpg" alt="Food Plate Two">
-                        </div>
-                        <div class="slide">
-                            <img class="slideshow-images" src="img/SunriseKitchen_menu.jpg" alt="Menu">
-                        </div>
-                        <div class="slide">
-                            <img class="slideshow-images" src="img/SunriseKitchen_outside.jpg" alt="Outside Restaurant">
-                        </div>
+                <div class="row-flexbox">
+                    <div class="specialties-text-container">
+                        <h2>SPECIALTIES</h2>
+                        <hr>
+                        <p><span class = "specialties-price">$20 Bouyon Soup</span><br>
+                            A hearty Haitian soup with meat, dumplings, and vegetables</p>
+                        <p><span class = "specialties-price">$11 Soup Joumou</span><br>
+                            A small portion of hearty, stewed vegetables</p>
+                        <p><span class = "specialties-price">$20 Bouyon Soup</span><br>
+                            A hearty Haitian soup with meat, dumplings, and vegetables</p>
+                        <button class="fs-button" type="submit">Full Menu</button>
                     </div>
+                        <div id="slideshow">
+                            <div class="slide-wrapper">
+                                <div class="slide">
+                                    <img class="slideshow-images" src="img/SunriseKitchen_food.jpg"
+                                         alt="Food Plate One">
+                                </div>
+                                <div class="slide">
+                                    <img class="slideshow-images" src="img/SunriseKitchen_food2.jpg"
+                                         alt="Food Plate Two">
+                                </div>
+                                <div class="slide">
+                                    <img class="slideshow-images" src="img/SunriseKitchen_menu.jpg" alt="Menu">
+                                </div>
+                                <div class="slide">
+                                    <img class="slideshow-images" src="img/SunriseKitchen_outside.jpg"
+                                         alt="Outside Restaurant">
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
-            <button class="menu"><a href="Menu.html">Full Menu</a></button>
         </div>
+        <!--------------------------------Slideshow Gallery------------------------------------>
+
         <!--------------------------------------------------------------------------------------->
         <div class="review-container">
             <img class="review-image" src="img/employeeImage.png" alt="Chef Photo">
@@ -125,7 +124,7 @@
                 </svg>
             </div>
             <div>
-                <button><a href="review.html">REVIEW US</a></button>
+                <button class="fs-button" type="submit">Review Us</button>
             </div>
         </div>
 
