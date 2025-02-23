@@ -34,26 +34,26 @@
         transform: translate(0px, 0px);
     }
     50% {
-        transform: translate(-200px, 0px) scale(0, 1) skew(-24deg, -15deg);
+        transform: translate(-200px, 0px) scale(0, 1) skew(-24deg, 0deg);
     }
     100% {
-        transform: translate(-200px, 0px) scale(0, 1) skew(-24deg, -15deg);
+        transform: translate(-200px, 0px) scale(0, 1) skew(-24deg, 0deg);
     }
 }
 @keyframes leftReveal {
     0% {
         opacity: 0;
-        transform: translate(-200px, 00px) scale(0, 1) skew(-24deg, 15deg);
+        transform: translate(-200px, 00px) scale(0, 1) skew(-24deg, 0deg);
     }
     49% {
         opacity: 0;
     }
     50% {
         opacity: 1;
-        transform: translate(-200px, 00px) scale(0, 1) skew(-24deg, 15deg);
+        transform: translate(-200px, 00px) scale(0, 1) skew(-24deg, 0deg);
     }
     100% {
-        transform: translate(-400px, 0px) scale(1, 1) skew(0deg, 0deg);
+        transform: translate(-450px, 0px) scale(1, 1) skew(0deg, 0deg);
     }
 }
 @keyframes shearRight {
@@ -61,12 +61,29 @@
         transform: translate(0px, 0px);
     }
     50% {
-        transform: translate(200px, 0px) scale(0, 1) skew(24deg, 15deg);
+        transform: translate(200px, 0px) scale(0, 1) skew(24deg, 0deg);
     }
     100% {
         transform: translate(200px, 0px) scale(0, 1) skew(24deg, 0deg);
     }
 }
+@keyframes rightReveal {
+    0% {
+        opacity: 0;
+        transform: translate(200px, 0px) scale(0, 1) skew(24deg, 0deg);
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(200px, 0px) scale(0, 1) skew(24deg, 0deg);
+    }
+    100% {
+        transform: translate(450px, 0px) scale(1, 1) skew(0deg, 0deg);
+    }
+}
+
 .menu-container {
     width: calc(500px * 3);
     height: auto;
@@ -90,22 +107,29 @@
 
 }
 .menu-container img:nth-child(1) {
-    z-index: 3;
-    animation: shearLeft 3s infinite ease-in-out;
-    animation-iteration-count: 1;
+    z-index: 6;
+    animation: shearLeft forwards 3s ease-in-out;
 
 }
 .menu-container img:nth-child(2) {
-    z-index: 2;
-    animation: shearRight 3s infinite ease-in-out;
-    animation-iteration-count: 1;
+    z-index: 5;
+    animation: shearRight forwards 3s ease-in-out;
 
 }
 .menu-container img:nth-child(3) {
-    animation-iteration-count: 1;
     z-index: 1;
-    animation: leftReveal 3s infinite ease-in-out;
+}
+.menu-container img:nth-child(4) {
+    z-index: 4;
+    animation: rightReveal 3s forwards ease-in-out;
+}
 
+.menu-container img:nth-child(5) {
+    z-index: 3;
+}
+.menu-container img:nth-child(6) {
+    animation: leftReveal forwards 3s ease-in-out;
+    z-index: 2;
 }
 @keyframes slide {
     0% {
