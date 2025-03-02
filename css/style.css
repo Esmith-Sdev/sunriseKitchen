@@ -4,6 +4,9 @@
     padding: 0;
     list-style-type: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 /*<!--------------------------Fonts--------------------------->*/
 @font-face {
     font-family: Helvetica;
@@ -245,6 +248,7 @@ header {
     margin: 0;
     position: sticky;
     top: 0;
+    height: 6em;
     background-color: #f38129;
     width: 100%;
     z-index: 999;
@@ -272,7 +276,7 @@ header::before {
     background-color: transparent;
 }
 .logo {
-    width: 25vw;
+    width: 6em;
     height: auto;
     position: relative;
     z-index: 1001;
@@ -286,21 +290,27 @@ header::before {
 /*<!--------------------------Nav bar two--------------------------->*/
 .nav-bar-two {
     background-color: #D85F00FF;
-    height: 3rem;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 6em;
+    z-index: 2;
 }
 
 .nav-bar-two a {
     color: #00a99d;
-    text-decoration: underline;
+    text-decoration: none;
     z-index: 0;
 }
 
 .nav-bar-two a:hover {
     background-color: #FFFFFF;
-    border-radius: 0;
+    border-radius: .5em;
+    padding: .1em;
+}
+section {
+    scroll-margin-top: 8em;
 }
 /*<!--------------------------End Nav bar two--------------------------->*/
 nav ul {
@@ -469,12 +479,40 @@ button:hover {
     text-align: center;
     justify-content: flex-start;
     padding-bottom: 5vw;
+    width: 100%;
 }
+
 p {
     font-family: Helvetica;
     font-size: .5em;
     text-align: center;
     line-height: 2em;
+    color: black;
+}
+.about-p {
+    font-size: 1em;
+    text-align: center;
+}
+.about-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.about-container img {
+    background-size: 100% 100%;
+    width: 100%;
+    border-radius: 50%;
+    padding: 1em 0;
+    animation: textFadeIn 3s ease-in-out;
+}
+.about-container .row-flexbox {
+    display: block;
+    text-align: center;
+}
+.about-bubble {
+    display: none;
 }
 .specialties-price {
     font-size: 2em;
@@ -492,17 +530,28 @@ p {
     justify-content: left;
     max-width: 100%;
 }
+
 .column-flexbox {
     display: flex;
     flex-direction: column;
     width: 50%;
     padding-right: 1em;
 }
+.about-column-flexbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 1em;
+    align-items: center;
+}
 .row-flexbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+}
+.specialties-row-flexbox {
+    display: block;
 }
 .items-right {
     padding-left: 2em;
@@ -544,10 +593,10 @@ p {
     background-image: url("/img/employeeImage.png");
     align-self: center;
     background-repeat: no-repeat;
-    width: 25em;
+    width: 75%;
     height: auto;
     background-position: center;
-    border-radius: 5em;
+    border-radius: 150px;
 }
 
 .review-icon-container {
@@ -705,6 +754,7 @@ fieldset {
     font-family: var(--font-family-display);
     font-size: 1rem;
     line-height: 1.25rem;
+    z-index: 1;
 }
 
 .fs-description {
@@ -949,9 +999,37 @@ fieldset {
 }
 
 /*<--------------------------------END OF FORM CSS----------------------->*/
-
-/*<-------------------------480px Media Query-------------------------->*/
-@media (min-width: 480px) {
+.order-menu-row-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.order-menu-row-flexbox a {
+    font-size: .8em;
+    padding: .5em;
+    color: #000000;
+}
+.order-menu-row-flexbox a:hover {
+    color: #00a99d;
+    cursor: pointer;
+}
+.add-to-cart-button {
+    background-color: transparent;
+    border: none;
+}
+.add-to-cart-button:hover{
+    background-color: #d3d3d3;
+    cursor: pointer;
+    width:50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+}
+/*<-------------------------600px Media Query-------------------------->*/
+@media (min-width: 600px) {
     .wrapper {
         width: 100%;
     }
@@ -960,7 +1038,24 @@ fieldset {
         display: none;
     }
 }
+@media (min-width:600px)  {
+    .specialties-text-container h2 {
+        font-size: 4em;
+    }
+    p {
+        font-size: 1em;
+    }
+    header {
+        height: 10em;
+    }
+    .logo {
+        width: 10em;
+    }
+    .nav-bar-two {
+        top: 10em;
+    }
 
+}
 /*<-------------------------1024px Media Query(Desktop)-------------------------->*/
 @media (min-width: 1024px) {
     .flexbox {
@@ -971,7 +1066,9 @@ fieldset {
         width: 100%;
         justify-content: left;
     }
-
+    header {
+        height: 10rem;
+    }
     /*<!--------------------------Menu Animation--------------------------->*/
     @keyframes shearLeft {
         0% {
@@ -1211,12 +1308,18 @@ fieldset {
         height: 75px;
         font-family: Helvetica;
     }
-
+    .leaf-background {
+        background-size: 100% 100%;
+        position: relative;
+        opacity: .2;
+    }
     .nav-order-button-container a:hover {
         padding: 0;
         background-color: #008379;
     }
-
+    section {
+        scroll-margin-top: 10em;
+    }
     .wrapper {
         width: 100%;
     }
@@ -1250,9 +1353,11 @@ fieldset {
     .ham-menu {
         display: none;
     }
-
+    .nav-bar-two {
+        top: 10em;
+    }
     .nav-bar-two label {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     #homeHero {
         height: 35vw;
@@ -1276,6 +1381,28 @@ fieldset {
         padding-bottom: 2em;
         font-size: 1em;
     }
+    .about-p {
+        font-size: 1em;
+        text-align: left;
+        padding: 2em 2em;
+    }
+    .about-container img {
+        width: 35%;
+    }
+    .about-bubble {
+        height: 15vw;
+        display: block;
+    }
+    .about-container .row-flexbox {
+        display: flex;
+    }
+    .about-column-flexbox {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding-right: 1em;
+        align-items: center;
+    }
     .specialties-container {
         justify-content: center;
         display: flex;
@@ -1284,7 +1411,6 @@ fieldset {
     .specialties-text-container {
         display: flex;
         flex-direction: column;
-        flex: 1;
         max-width: 100%;
         padding-right: 2em;
     }
@@ -1294,6 +1420,12 @@ fieldset {
         justify-content: left;
         padding-left: 0;
         align-items: center;
+    }
+    .specialties-row-flexbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
     }
     .row-flexbox {
         display: flex;
@@ -1356,5 +1488,13 @@ fieldset {
     .gallery-container img:hover {
         transition: transform .5s;
         transform: scale(1.2);
+    }
+    .review-image {
+        width: 25%;
+    }
+    .order-menu-row-flexbox a {
+        font-size: 2em;
+        padding: 1em;
+        color: #000000;
     }
 }
